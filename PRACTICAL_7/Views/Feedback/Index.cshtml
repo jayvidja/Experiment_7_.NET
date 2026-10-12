@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Student Feedback Portal";
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
+
+<div>
+    <p><b>Student Feedback Portal</b></p> <p>Please provide your valuable feedback.</p>
+    <p>
+        @Html.ActionLink("Give Feedback", "Create", "Feedback")
+    </p>
+
+    <p>
+        @Html.ActionLink("View Feedback", "List", "Feedback")
+    </p>
+
+</div>

@@ -1,0 +1,32 @@
+﻿@model List<PRACTICAL_7.Models.Feedback>
+
+@{
+    ViewBag.Title = "Feedback List";
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
+
+<h2>Feedback List</h2>
+<table border="1" cellpadding="5">
+    <tr> <th>Enrollment No</th> <th>Student Name</th> <th>Subject</th> <th>Rating</th> <th>Comments</th> </tr>
+    @foreach (var feedback in Model)
+    {
+        <tr>
+            <td>@feedback.EnrollmentNo</td>
+            <td>@feedback.StudentName</td>
+            <td>@feedback.Subject</td>
+            <td>@feedback.Rating</td>
+            <td>@feedback.Comments</td>
+        </tr>
+    }
+
+</table>
+<br />
+
+@Html.ActionLink("Give New Feedback", "Create", "Feedback");
+Shared/_StudentInfo.cshtml,
+<div>
+    <p><b>Student Feedback Portal</b></p>
+    <p>Please Provide your valuable feedback.</p>
+</div>
+
+
